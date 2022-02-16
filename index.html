@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Contatos 2</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="main.js"></script>
+</head>
+
+<body class="bg-dark" style="font-family: 'Roboto Slab', serif;">
+
+    <div class="divCadastro">
+
+        <div class="text-center mt-3">
+            <img class="border border-secondary rounded-circle bg-light bg-opacity-50" src="contato.png" onclick="atualizarPagina();">
+            <p class="h2 opacity-75 mt-3 text-light">Cadastro de Contatos</p>
+        </div>
+
+        <div class="container border border-secondary rounded  bg-light mt-5">
+
+            <div class="p-5">
+                <form>
+
+                    <div class="form-group row">
+                        <label class="form-label mt-1" id="lblNome" for="txtNome">Nome<span class="text-danger">*</span>:</label>
+                        <input class="form-control" id="txtNome" type="text" name="txtNome" required>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="form-label mt-1" id="lblEmail" for="txtEmail">Email<span class="text-danger">*</span>:</label>
+                        <input class="form-control" id="txtEmail" type="email" name="txtEmail" required>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="form-label mt-1" id="lblDataNascimento" for="txtDataNascimento">Data de Nascimento<span class="text-danger">*</span>: </label>
+                        <input class="form-control" id="txtDataNascimento" type="date" name="txtDataNascimento" required><br>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="form-label mt-1" id="lblCpf" for="txtCpf">CPF<span class="text-danger">*</span>:</label>
+                        <input class="form-control" id="txtCpf" type="text" name="txtCpf" autocomplete="OFF" required maxlength="14" placeholder="xxx.xxx.xxx-xx">
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="form-label mt-1" id="lblCidade" for="txtCidade">Cidade: </label>
+                        <input class="form-control" id="txtCidade" type="text" name="txtCidade">
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="form-label mt-1" id="lblEstado" for="txtEstado">Estado:</label>
+                        <select class="form-select" name="txtEstado" id="txtEstado">
+                            <option></option>
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="form-label mt-1" id="lblEndereco" for="txtEndereco">Endereço: </label>
+                        <textarea class="form-control" id="txtEndereco" name="txtEndereco" rows="3">
+                    </textarea>
+                    </div>
+
+                    <div class="mb-1 mt-5 mb-3 form-group">
+                        <input type="button" class="btn btn-outline-primary" id="btnCadastrar" value="CADASTRAR" onclick="cadastrarContato();">
+                        <input type="button" class="btn btn-outline-primary" id="btnSalvar" value="SALVAR" onclick="salvarContato();" style="display: none;">
+                        <input type="button" class="btn btn-outline-secondary" id="btnLimpar" value="LIMPAR" onclick="limparCampos();">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div>
+            <table class="table table-bordered container mt-3 mb-5 bg-light">
+                <thead class="thead-dark text-center">
+                    <th class="col" scope="col" hidden>ID</th>
+                    <th class="col" scope="col">Nome</th>
+                    <th class="col" scope="col">Email</th>
+                    <th class="col" scope="col">Data de Nascimento</th>
+                    <th class="col" scope="col">CPF</th>
+                    <th class="col" scope="col">Cidade</th>
+                    <th class="col" scope="col">Estado</th>
+                    <th class="col" scope="col">Endereço</th>
+                    <th class="col" scope="col">Ações</th>
+                </thead>
+                <tbody class="ml-3 text-center" id="tbody">
+                    <tr class="row" scope="row"></tr>
+                </tbody>
+            </table>
+        </div>
+</body>
+
+</html>
