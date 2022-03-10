@@ -8,6 +8,6 @@
 
 <div>
 </br>
-<img src="https://github.com/jeanmoissa/programming_projects_exercises/blob/main/EX3/print3.PNG" width="40%">
-<img src="https://github.com/jeanmoissa/programming_projects_exercises/blob/main/EX3/print4.PNG" width="40%">
+<img src="https://github.com/jeanmoissa/programming_projects_exercises/blob/main/EX3/print3.PNG" width="45%">
+<img src="https://github.com/jeanmoissa/programming_projects_exercises/blob/main/EX3/print4.PNG" width="45%">
 </div>
