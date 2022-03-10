@@ -9,5 +9,5 @@
 <div>
 </br>
 <img src="https://github.com/jeanmoissa/programming_projects_exercises/blob/main/EX3/print3.PNG" width="45%">
-<img src="https://github.com/jeanmoissa/programming_projects_exercises/blob/main/EX3/print4.PNG" width="45%" margin-top="50px">
+<img src="https://github.com/jeanmoissa/programming_projects_exercises/blob/main/EX3/print4.PNG" width="45%" padding-top="50px">
 </div>
