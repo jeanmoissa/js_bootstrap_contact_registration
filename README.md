@@ -3,7 +3,7 @@
 ### Formulario utilizando Bootstrap e Javascript
 
 #### Acesso a pagina: 
-* <a href="[https://jeanmoissa.github.io/javascript_bootstrap_contact_registration/](https://jeanmoissa.github.io/js_bootstrap_contact_registration/)">Acesso a tela de cadastro</a>
+* <a href="https://jeanmoissa.github.io/js_bootstrap_contact_registration/">Acesso a tela de cadastro</a>
 * <a href="https://getbootstrap.com/docs/4.1/components/forms/">Documentação bootstrap</a>
 
 <div>
